@@ -1,0 +1,15 @@
+// Balance threshold proof.
+// (Noir only allows ASCII in comments, so this file is in English;
+//  the measurement logic is commented in Korean over in scripts/bench.sh.)
+//
+// Minimal payment / stablecoin example: prove "my balance is at or above
+// some threshold" WITHOUT revealing the actual balance amount.
+//
+// - balance   : private input. Only the prover knows the real balance.
+// - threshold : pub input. Public reference value (e.g. minimum payment).
+//
+// The proof only exists if the assert passes, so the mere existence of a
+// valid proof means "balance >= threshold" is true.
+fn main(balance: u64, threshold: pub u64) {
+    assert(balance >= threshold);
+}

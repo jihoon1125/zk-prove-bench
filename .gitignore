@@ -1,0 +1,5 @@
+# Noir/Barretenberg build artifacts
+circuits/**/target/
+
+# Measurement result JSON (remove this line if you want to track them)
+results/*.json
