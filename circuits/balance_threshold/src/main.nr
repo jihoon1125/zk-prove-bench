@@ -10,6 +10,15 @@
 //
 // The proof only exists if the assert passes, so the mere existence of a
 // valid proof means "balance >= threshold" is true.
-fn main(balance: u64, threshold: pub u64) {
+use std::hash::poseidon;
+
+global ROUNDS: u32 = 70;
+
+fn main(balance: u64, threshold: pub u64) -> pub Field {
+    let mut acc = balance as Field;
+    for _ in 0..ROUNDS {
+        acc = poseidon::bn254::hash_2([acc, threshold as Field]);
+    }
     assert(balance >= threshold);
+    acc
 }
