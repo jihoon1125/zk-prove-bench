@@ -73,6 +73,17 @@ zkbench report --open
 A "circuit" is any folder containing a `Nargo.toml` (and a `Prover.toml` with
 valid inputs). `zkbench` reads the package name, compiles, and measures.
 
+## Options
+
+- `--repeats <N>` — how many times to measure each stage (default: 3).
+  The first run is discarded to absorb cold CRS/cache cost, and the rest
+  are reduced to their median. Increase for more stable numbers on noisy
+  systems:
+
+```bash
+  zkbench run ./circuit --repeats 5
+```
+
 ## What it measures
 
 For each circuit:
