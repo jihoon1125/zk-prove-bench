@@ -6,6 +6,17 @@ A reproducible proof-generation benchmarker for [Noir](https://noir-lang.org/) Z
 zero-knowledge proofs for your Noir circuits, and presents the results as clean
 tables, terminal bar charts, and an HTML report.
 
+## Screenshots
+
+Terminal comparison:
+
+![terminal output](docs/zkbench_cli.png)
+
+HTML report:
+
+![html report](docs/zkbench_html.png)
+
+
 ## Why another benchmarker?
 
 Measuring ZK proving performance naively is misleading. The first run of any
