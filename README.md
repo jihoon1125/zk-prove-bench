@@ -1,4 +1,4 @@
-# zk-prove-bench
+# zkbench
 
 A tool to **profile the proof-generation process** of ZK circuits written in Noir.
 
